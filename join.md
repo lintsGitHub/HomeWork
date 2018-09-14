@@ -1,5 +1,5 @@
-##类似内联数据表的数据查询
-####表中的一些数据如图
+## 类似内联数据表的数据查询
+#### 表中的一些数据如图
 ![表](file:///D:/git/data.jpg)
 ***
 需求--查询出所有广东省的市、县
@@ -17,6 +17,6 @@ select shi.id ID , xian.cityName province  , sheng.cityName city ,shi.cityName d
 `select d.id, d.cityName ,s.cityName ,w.cityName from s_provinces s ,s_provinces d ,s_provinces w where s.id = d.parentId and s.parentId = w.id and w.cityName= '广东省' ;
 `
 
-###--分析--
+### --分析--
 我们使用这种建表方式是否合适？
 >合适这个东西，要看需求 ，这种表查询比较方便，但进行数据修改，添加，删除时就会麻烦
